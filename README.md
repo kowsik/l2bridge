@@ -5,7 +5,7 @@ It is a libpcap based user-mode layer2 bridge. You need the latest version of
 # What do I use this for?
 I originally wrote it so I can bridge en1 and en0 on my MacBook to capture
 iPhone traffic without jail-breaking, installing access points, hubs and other
-complex setups.
+complex setups. You can read more about this on our [blog](http://bit.ly/cBFvDd)
 
 # How do I build this
 Just type `make` and you are done.

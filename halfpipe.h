@@ -17,7 +17,7 @@
 #include <pcap.h>
 
 typedef struct {
-    u_char addr[6];
+    uint8_t addr[6];
 } eth_addr_t;
 
 class HalfPipe {
@@ -36,8 +36,8 @@ public:
     std::string ifname() const { return _ifname; }
 
     int open();
-    int read(u_char *bytes, size_t size, Type &type);
-    int write(const u_char *bytes, size_t size);
+    int read(uint8_t *bytes, size_t size, Type &type);
+    int write(const uint8_t *bytes, size_t size);
     void close();
 
 private:

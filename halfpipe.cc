@@ -112,14 +112,14 @@ HalfPipe::close()
  * Read a packet from the half pipe. 
  */
 int
-HalfPipe::read(u_char *bytes, size_t size, Type &type)
+HalfPipe::read(uint8_t *bytes, size_t size, Type &type)
 {
     if (_pcap == 0 || bytes == 0 || size == 0)
         return -1;
 
     struct pcap_pkthdr phdr;
     struct pcap_pkthdr *php = &phdr;
-    const u_char *bptr = 0;
+    const uint8_t *bptr = 0;
     int ret = ::pcap_next_ex(_pcap, &php, &bptr);
     if (ret == 0)
         return 0;
@@ -155,7 +155,7 @@ HalfPipe::read(u_char *bytes, size_t size, Type &type)
  * Write a packet through this half pipe into the interface
  */
 int
-HalfPipe::write(const u_char *bytes, size_t size)
+HalfPipe::write(const uint8_t *bytes, size_t size)
 {
     if (_pcap == 0 || bytes == 0 || size == 0)
         return -1;

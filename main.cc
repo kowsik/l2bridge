@@ -39,7 +39,7 @@ main(int argc, const char **argv)
         return 1;
 
     HalfPipe *pipes[2] = { &p1, &p2 };
-    u_char bytes[64*1024];
+    uint8_t bytes[64*1024];
     uint64_t counts[2] = { 0, 0 };
 
     printf("bridging %s <=> %s\n", p1.ifname().c_str(), p2.ifname().c_str());

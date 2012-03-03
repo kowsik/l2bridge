@@ -131,7 +131,7 @@ HalfPipe::read(uint8_t *bytes, size_t size, Type &type)
     int nread = std::min(size_t(php->len), size);
     ::memcpy(bytes, bptr, nread);
 
-    const eth_addr_t broadcast = { 0xff, 0xff, 0xff, 0xff, 0xff, 0xff };
+    const eth_addr_t broadcast = {{ 0xff, 0xff, 0xff, 0xff, 0xff, 0xff }};
     eth_addr_t dst;
     ::memcpy(&dst, bytes, sizeof dst);
 
